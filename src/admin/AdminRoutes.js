@@ -10,7 +10,7 @@ import Dashboard from './Dashboard';
 import Settings from "./Settings";
 import Users from "./Users";
 
-function AdminRouter() {
+function AdminRoutes() {
   return (
     <div className="admin-panel">
       <div className="sidebar">
@@ -40,4 +40,4 @@ function AdminRouter() {
   );
 }
 
-export default AdminRouter;
+export default AdminRoutes;

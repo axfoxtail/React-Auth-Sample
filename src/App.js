@@ -5,8 +5,8 @@ import {
   Route
 } from "react-router-dom";
 import './App.scss';
-import AdminRouter from './admin/AdminRouter';
-import HomeRouter from './pages/HomeRouter';
+import AdminRoutes from './admin/AdminRoutes';
+import HomeRoutes from './pages/HomeRoutes';
 import NoMatch from './components/NoMatch';
 
 function App() {
@@ -19,10 +19,10 @@ function App() {
           <NoMatch />
         </Route>
         <Route path="/admin">
-          <AdminRouter />
+          <AdminRoutes />
         </Route>
         <Route path="/">
-          <HomeRouter />
+          <HomeRoutes />
         </Route>
       </Switch>
     </Router>

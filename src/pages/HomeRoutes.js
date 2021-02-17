@@ -9,7 +9,7 @@ import About from "./About";
 import Contact from "./Contact";
 import Home from "./Home";
 
-function HomeRouter() {
+function HomeRoutes() {
   return (
     <div className="main">
       <Header />
@@ -34,4 +34,4 @@ function HomeRouter() {
   );
 }
 
-export default HomeRouter;
+export default HomeRoutes;
