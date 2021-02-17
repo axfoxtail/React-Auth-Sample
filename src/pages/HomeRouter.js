@@ -1,8 +1,8 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 import Header from "./_components/_layout/Header";
 import About from "./About";
@@ -11,7 +11,7 @@ import Home from "./Home";
 
 function HomeRouter() {
   return (
-    <Router>
+    <div className="main">
       <Header />
       <Switch>
         <Route path="/contact" exact>
@@ -26,8 +26,11 @@ function HomeRouter() {
         <Route path="/" exact>
           <Home />
         </Route>
+        <Route path="*">
+          <Redirect to="/404" />
+        </Route>
       </Switch>
-    </Router>
+    </div>
   );
 }
 

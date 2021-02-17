@@ -1,8 +1,8 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 import Leftbar from './_components/_layout/Leftbar';
 import Topbar from './_components/_layout/Topbar';
@@ -12,11 +12,11 @@ import Users from "./Users";
 
 function AdminRouter() {
   return (
-    <Router>
+    <div className="admin-panel">
       <div className="sidebar">
         <Leftbar />
       </div>
-      <div className="main">
+      <div className="main-content">
         <Topbar />
         <Switch>
           <Route path="/admin/settings" exact>
@@ -31,9 +31,12 @@ function AdminRouter() {
           <Route path="/admin" exact>
             <Dashboard />
           </Route>
+          <Route path="*">
+            <Redirect to="/404" />
+          </Route>
         </Switch>
       </div>
-    </Router>
+    </div>
   );
 }
 

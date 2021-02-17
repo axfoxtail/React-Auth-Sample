@@ -13,7 +13,7 @@ function Header() {
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/about">Home</NavDropdown.Item>
+              <NavDropdown.Item href="/home">Home</NavDropdown.Item>
               <NavDropdown.Item href="/about">About</NavDropdown.Item>
               <NavDropdown.Item href="/contact">Contact</NavDropdown.Item>
               <NavDropdown.Divider />

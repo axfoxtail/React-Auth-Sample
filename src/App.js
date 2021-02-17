@@ -7,6 +7,7 @@ import {
 import './App.scss';
 import AdminRouter from './admin/AdminRouter';
 import HomeRouter from './pages/HomeRouter';
+import NoMatch from './components/NoMatch';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
+        <Route path="/404" exact>
+          <NoMatch />
+        </Route>
         <Route path="/admin">
           <AdminRouter />
         </Route>
