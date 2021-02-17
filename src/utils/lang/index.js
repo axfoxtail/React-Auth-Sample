@@ -1,7 +1,7 @@
 import en from './en';
 import cn from './cn';
 
-import Const from '../utils/Constants';
+import Const from '../Constants';
 
 const getLang = () => {
     if (!localStorage.getItem(Const.LANGUAGE)) {
