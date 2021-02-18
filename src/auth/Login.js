@@ -4,6 +4,7 @@ import {
   useHistory
 } from "react-router-dom";
 import {AuthFactory} from '../factory';
+import Helper from '../utils/Helper';
 
 function Login() {
   const history = useHistory();
@@ -17,15 +18,18 @@ function Login() {
   }
 
   const submitLogin = () => {
+    Helper.showSpinner();
     AuthFactory.login(credentials)
       .then(res => {
         if(res.status === 200) {
           AuthFactory.saveLoginUserInfo(res.data);
           history.push(res.data.is_admin ? '/admin' : '/');
         }
+        Helper.hideSpinner();
       })
       .catch(err => {
         console.log('err: ', err);
+        Helper.hideSpinner();
       })
   }
   

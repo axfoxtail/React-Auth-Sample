@@ -46,6 +46,16 @@ $theme-colors: (
   }
 }
 
+// Shared App CSS
+.overlay-loader {
+  z-index: 1010;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #00000050;
+}
 
 // Custom Styles
 @import './scss/auth.scss';
