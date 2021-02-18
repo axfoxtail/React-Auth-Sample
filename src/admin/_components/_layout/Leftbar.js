@@ -4,6 +4,7 @@ import {Nav} from 'react-bootstrap';
 function Leftbar() {
   return (
     <div className="leftbar">
+      <h2 className="admin-logo">React App</h2>
       <Nav className="col-md-12 d-none d-md-block bg-dark sidebar"
         activeKey="/admin/dashboard"
         onSelect={selectedKey => {if(selectedKey === 'link') alert(`selected ${selectedKey}`)}}
