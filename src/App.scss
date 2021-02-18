@@ -48,4 +48,5 @@ $theme-colors: (
 
 
 // Custom Styles
+@import './scss/auth.scss';
 @import './scss/admin.scss';

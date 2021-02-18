@@ -8,6 +8,7 @@ import './App.scss';
 import AdminRoutes from './admin/AdminRoutes';
 import HomeRoutes from './pages/HomeRoutes';
 import NoMatch from './components/NoMatch';
+import Login from './auth/Login';
 
 function App() {
   return (
@@ -17,6 +18,12 @@ function App() {
       <Switch>
         <Route path="/404" exact>
           <NoMatch />
+        </Route>
+        <Route path="/login" exact>
+          <Login />
+        </Route>
+        <Route path="/admin/login" exact>
+          <Login />
         </Route>
         <Route path="/admin">
           <AdminRoutes />
