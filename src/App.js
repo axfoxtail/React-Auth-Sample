@@ -10,6 +10,8 @@ import AdminRoutes from './admin/AdminRoutes';
 import HomeRoutes from './pages/HomeRoutes';
 import NoMatch from './components/NoMatch';
 import Login from './auth/Login';
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer } from 'react-notifications';
 import { css } from "@emotion/core";
 import FadeLoader from "react-spinners/FadeLoader";
 const override = css`
@@ -43,6 +45,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      <NotificationContainer/>
       <div className={loading ? "overlay-loader" : "d-none"}>
         <FadeLoader
             css={override}

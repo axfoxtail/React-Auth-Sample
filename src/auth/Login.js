@@ -23,13 +23,17 @@ function Login() {
       .then(res => {
         if(res.status === 200) {
           AuthFactory.saveLoginUserInfo(res.data);
+          Helper.showToast('success', 3000, res.message);
           history.push(res.data.is_admin ? '/admin' : '/');
+        } else {
+          Helper.showToast('warning', 3000, res.message);
         }
         Helper.hideSpinner();
       })
       .catch(err => {
         console.log('err: ', err);
         Helper.hideSpinner();
+        Helper.showToast('error', 3000, 'Failed!');
       })
   }
   
